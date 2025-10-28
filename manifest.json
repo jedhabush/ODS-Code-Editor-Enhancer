@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "ODS Code Enhancer",
+  "version": "2.0.1",
+  "description": "Adds autocomplete and keyword highlighting to OpenDataSoft code editor.",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["isolated-script.js"],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    },
+    {
+      "matches": ["https://*/*"],
+      "js": [
+        "themes/themes.js",
+        "keywords.js",
+        "utils/codemirror-finder.js",
+        "features/multi-cursor.js",
+        "features/highlighting.js",
+        "features/snippets.js",
+        "features/auto-close.js",
+        "features/comment-toggle.js",
+        "content.js"
+      ],
+      "css": ["styles.css"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["style.css"],
+      "matches": ["https://*/*"]
+    }
+  ]
+}

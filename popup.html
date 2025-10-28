@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>🎨 CodeMirror Enhancer</h2>
+
+      <div class="setting">
+        <label for="themeSelect">Editor Theme</label>
+        <select id="themeSelect">
+          <option>Loading themes...</option>
+        </select>
+      </div>
+
+      <div class="theme-preview" id="themePreview">
+        <div>function hello() {</div>
+        <div>console.log("Hello");</div>
+        <div>}</div>
+        <br />
+        <!-- <div id="divTags">&lt;div&gt;Hello World!&lt;/div&gt;</div> -->
+        <div id="divTags">
+          <span class="divTag"
+            >&lt;div <span class="class-dec">class="container"</span>&gt;</span
+          >
+          <span class="regText">Hello world</span>
+
+          <span class="divTagCls">&lt;/div&gt;</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Keyboard Shortcuts Toggle -->
+      <div class="setting">
+        <button class="toggle-button" id="shortcutsToggle">
+          <span class="toggle-icon">⌨️</span>
+          <span class="toggle-text">Keyboard Shortcuts</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+      </div>
+
+      <!-- Keyboard Shortcuts Panel -->
+      <div class="shortcuts-panel" id="shortcutsPanel">
+        <div class="shortcuts-content">
+          <h3>🎯 Available Shortcuts</h3>
+
+          <div class="shortcut-group">
+            <div class="shortcut-item">
+              <kbd>Cmd/Ctrl</kbd> + <kbd>D</kbd>
+              <span>Select next occurrence</span>
+            </div>
+            <div class="shortcut-item">
+              <kbd>Cmd/Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd>
+              <span>Select all occurrences</span>
+            </div>
+            <div class="shortcut-item">
+              <kbd>Cmd/Ctrl</kbd> + <kbd>/</kbd>
+              <span>Toggle comment line/block</span>
+            </div>
+            <div class="shortcut-item">
+              <kbd>pre|span|div</kbd> + <kbd>Enter</kbd>
+              <span>Quick tag</span>
+            </div>
+            <!-- <div class="shortcut-item">
+              <kbd>ngrep</kbd> + <kbd>Enter</kbd>
+              <span>ng-repeat directive</span>
+            </div> -->
+            <div class="shortcut-item">
+              <kbd
+                >ngrep <br />
+                nginit <br />
+                ngclass <br />
+                ngclick <br />
+                ngif
+              </kbd>
+              + <kbd>Enter</kbd>
+              <span
+                >ng-repeat <br />
+                ng-init <br />
+                ng-class <br />
+                ng-click <br />
+                ng-if directives</span
+              >
+            </div>
+            <div class="shortcut-item">
+              <kbd>{} | () | "" | ''</kbd>
+              <span>Smart pairing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="setting">
+        <label class="checkbox-label">
+          <input type="checkbox" id="highlightEnabled" checked />
+          <span>Enable Selection Highlighting</span>
+        </label>
+      </div> -->
+
+      <!-- <div class="info-text">
+        Select text in the CodeMirror editor to highlight all matching
+        occurrences
+      </div> -->
+
+      <button id="save">Save Settings</button>
+    </div>
+
+    <!-- Load themes.js FIRST, then popup.js -->
+    <script src="themes/themes.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
