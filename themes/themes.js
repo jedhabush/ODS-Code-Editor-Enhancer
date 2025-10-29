@@ -31,12 +31,13 @@
  span.cm-string-2 { color: #61CE3C !important; }
  span.cm-meta { color: #D8FA3C !important; }
  span.cm-builtin { color: #8DA6CE !important; }
- span.cm-tag { color: #8DA6CE !important; }
+ span.cm-tag { color: #5ccfe6 !important; }
  span.cm-attribute { color: #8DA6CE !important; }
  span.cm-header { color: #FF6400 !important; }
  span.cm-hr { color: #AEAEAE !important; }
  span.cm-link { color: #8DA6CE !important; }
  span.cm-error { background: #9D1E15; color: #F8F8F8 !important; }
+span.cm-qualifier { color: #5ccfe6 !important; }
 
  .CodeMirror-activeline-background { background: #3C3636 !important; }
  .CodeMirror-matchingbracket { outline:1px solid grey;color:white !important; }
@@ -66,9 +67,10 @@
  span.cm-link { color: #CC7832 !important; }
  span.cm-atom { color: #CC7832 !important; }
  span.cm-error { color: #BC3F3C !important; }
- span.cm-tag { color: #629755; font-weight: bold; font-style: italic; text-decoration: underline; }
+ span.cm-tag { color: #629755 !important; font-weight: bold; font-style: italic; text-decoration: underline; }
+ span.cm-qualifier { color: #629755 !important; }
  span.cm-attribute { color: #6897bb !important; }
- span.cm-qualifier { color: #6A8759 !important; }
+ 
  span.cm-bracket { color: #A9B7C6 !important; }
  span.cm-builtin { color: #FF9E59 !important; }
  span.cm-special { color: #FF9E59 !important; }
@@ -132,7 +134,9 @@
  span.cm-variable-2 { color: #FFAA3E !important; }
  span.cm-def { color: #4DD !important; }
  span.cm-bracket { color: #D1EDFF !important; }
- span.cm-tag { color: #449 !important; }
+ span.cm-tag { color: #1DC116 !important; }
+  span.cm-qualifier { color: #1DC116 !important; }
+ 
  span.cm-link { color: #AE81FF !important; }
  span.cm-error { background: #F92672; color: #F8F8F0 !important; }
 
@@ -180,6 +184,7 @@
  span.cm-def { color: #ffd580 !important; }
  span.cm-bracket { color: rgba(92, 207, 230, 80) !important; }
  span.cm-tag { color: #5ccfe6 !important; }
+ span.cm-qualifier { color: #5ccfe6 !important; }
  span.cm-header { color: #bae67e !important; }
  span.cm-link { color: #5ccfe6 !important; }
  span.cm-error { color: #ff3333 !important; } 
