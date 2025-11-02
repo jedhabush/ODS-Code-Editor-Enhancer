@@ -20,6 +20,8 @@ export function applyTheme(themeId) {
 
     currentStyleElement = style;
 
+    // window.location.reload();
+
     // console.log(`✅ Applied theme: ${theme.name}`);
 }
 

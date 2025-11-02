@@ -22,7 +22,8 @@
 
             // Listen for Enter key
             cm.on('keydown', (instance, event) => {
-                if (event.key === 'Enter' && !event.shiftKey && !event.ctrlKey && !event.altKey) {
+                const enterORTab = event.key === 'Enter' || event.key === 'Tab'
+                if (enterORTab && !event.shiftKey && !event.ctrlKey && !event.altKey) {
                     const cursor = instance.getCursor();
                     const line = instance.getLine(cursor.line);
 

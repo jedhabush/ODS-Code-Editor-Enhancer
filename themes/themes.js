@@ -195,6 +195,63 @@ span.cm-qualifier { color: #5ccfe6 !important; }
   color: white !important;
 }
       `
+        },
+
+        vscodedark: {
+            name: 'VS Code Dark Plus',
+            styles: `
+            { font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif; }
+          
+            .CodeMirror { background: #1E1E1E !important; color: #D4D4D4 !important; }
+          
+            span.cm-meta { color: #9CDCFE !important; }
+            span.cm-number { color: #B5CEA8 !important; }
+            span.cm-keyword { color: #C586C0 !important; font-weight: bold; }
+            span.cm-def { color: #DCDCAA !important; font-style: italic; }
+            span.cm-variable { color: #9CDCFE !important; }
+            span.cm-variable-2 { color: #4FC1FF !important; }
+            span.cm-variable-3 { color: #DCDCAA !important; }
+            span.cm-type { color: #4EC9B0 !important; font-weight: bold; }
+            span.cm-property { color: #9CDCFE !important; }
+            span.cm-operator { color: #D4D4D4 !important; }
+            span.cm-string { color: #CE9178 !important; }
+            span.cm-string-2 { color: #CE9178 !important; }
+            span.cm-comment { color: #6A9955 !important; font-style: italic; }
+            span.cm-link { color: #4FC1FF !important; text-decoration: underline; }
+            span.cm-atom { color: #569CD6 !important; }
+            span.cm-error { color: #F44747 !important; }
+            span.cm-tag { color: #569CD6 !important; font-weight: bold; font-style: italic; }
+            span.cm-qualifier { color: #4EC9B0 !important; }
+            span.cm-attribute { color: #9CDCFE !important; }
+          
+            span.cm-bracket { color: #D4D4D4 !important; }
+            span.cm-builtin { color: #DCDCAA !important; }
+            span.cm-special { color: #DCDCAA !important; }
+            span.cm-matchhighlight { color: #FFFFFF !important; background-color: rgba(100, 100, 100, .3) !important; }
+            span.cm-searching { color: #FFFFFF !important; background-color: rgba(100, 100, 100, .4) !important; }
+          
+            .CodeMirror-cursor { border-left: 2px solid #AEAFAD !important; }
+            .CodeMirror-activeline-background { background: #2A2A2A !important; }
+            .CodeMirror-gutters { background: #252526 !important; border-right: 1px solid #2D2D2D !important; }
+            .CodeMirror-guttermarker { color: #DCDCAA !important; }
+            .CodeMirror-guttermarker-subtle { color: #858585 !important; }
+            .CodeMirrir-linenumber { color: #858585 !important; }
+            .CodeMirror-matchingbracket { background-color: #515C6A !important; color: #FFFFFF !important; font-weight: bold; }
+          
+            div.CodeMirror-selected { background: #264F78 !important; }
+          
+            .CodeMirror-hints.darcula {
+              font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+              color: #D4D4D4 !important;
+              background-color: #252526 !important;
+            }
+          
+            .CodeMirror-hints.darcula .CodeMirror-hint-active {
+              background-color: #37373D !important;
+              color: #FFFFFF !important;
+            }
+          `
+
         }
 
     };

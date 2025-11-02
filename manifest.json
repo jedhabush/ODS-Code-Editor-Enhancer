@@ -23,6 +23,8 @@
         "utils/codemirror-finder.js",
         "features/multi-cursor.js",
         "features/highlighting.js",
+        "features/search.js",
+        "features/autocomplete.js",
         "features/snippets/snippets-schema.js",
         "features/snippets/snippets.js",
         "features/auto-close.js",

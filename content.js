@@ -22,7 +22,7 @@
 
 const hostname = window.location.hostname;
 const path = window.location.pathname;
-const isDataPortal = hostname.startsWith('data.') || hostname.startsWith('smart.');
+// const isDataPortal = hostname.startsWith('data.') || hostname.startsWith('smart.');
 // const isOpenDataSoft = hostname.includes('.opendatasoft.com');
 const isOpenDataSoft = path.includes('/backoffice/pages/code-editor/');
 
@@ -31,7 +31,7 @@ const isOpenDataSoft = path.includes('/backoffice/pages/code-editor/');
 // Listen for theme changes from isolated script
 window.addEventListener('message', (event) => {
 
-    if (!isDataPortal && !isOpenDataSoft) {
+    if (!isOpenDataSoft) {
         console.log("RETURNED EARLY ")
         return; // Exit early
     }
@@ -39,7 +39,8 @@ window.addEventListener('message', (event) => {
     if (event.data.type === 'APPLY_THEME') {
         if (window.ExtensionThemes) {
             window.ExtensionThemes.applyTheme(event.data.themeId);
-            // console.log('✅ Theme applied:', event.data.themeId);
+            console.log('✅ Theme applied:', event.data.themeId);
+            // window.location.reload();
         } else {
             console.error('❌ ExtensionThemes not loaded yet');
         }
@@ -55,7 +56,7 @@ window.addEventListener('message', (event) => {
 // Request initial theme when ready
 function requestInitialTheme() {
 
-    if (!isDataPortal && !isOpenDataSoft) {
+    if (!isOpenDataSoft) {
         return; // Exit early
     }
 
@@ -77,7 +78,7 @@ window.addEventListener('load', requestInitialTheme);
 function attachToCodeMirror(cm, label = 'CodeMirror') {
 
     // If not permitted domain return
-    if (!isDataPortal && !isOpenDataSoft) {
+    if (!isOpenDataSoft) {
         return; // Exit early
     }
 
@@ -167,6 +168,25 @@ function attachToCodeMirror(cm, label = 'CodeMirror') {
     } else {
         console.warn('⚠️ CommentToggleFeature not loaded');
     }
+
+
+    // Setup search feature
+    if (window.SearchFeature && window.SearchFeature.setup) {
+        window.SearchFeature.setup(cm);
+        // console.log('✨ Comment toggle (Ctrl/Cmd + /) enabled');
+    } else {
+        console.warn('⚠️ SearchFeature not loaded');
+    }
+
+
+    // Setup Autocomplete feature
+    if (window.AutocompleteFeature && window.AutocompleteFeature.setup) {
+        window.AutocompleteFeature.setup(cm);
+        // console.log('✨ Comment toggle (Ctrl/Cmd + /) enabled');
+    } else {
+        console.warn('⚠️ Autocomplete not loaded');
+    }
+
 
 
 }
