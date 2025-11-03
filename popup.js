@@ -140,6 +140,8 @@ function updateThemePreview(themeId) {
 }
 
 function saveSettings() {
+    const path = window.location.pathname;
+    const isOpenDataSoft = path.includes('/backoffice/pages/code-editor/');
     const themeSelect = document.getElementById('themeSelect');
     // const highlightCheckbox = document.getElementById('highlightEnabled');
 
@@ -164,7 +166,7 @@ function saveSettings() {
 
             tabs.forEach(tab => {
                 // Check if tab URL matches our content script patterns
-                if (tab.url && (tab.url.includes('opendatasoft.com') || tab.url.includes('hawkesbury.nsw.gov.au'))) {
+                if (tab.url && isOpenDataSoft) {
                     // console.log('📤 Sending messages to tab:', tab.id);
 
                     // Send theme change
